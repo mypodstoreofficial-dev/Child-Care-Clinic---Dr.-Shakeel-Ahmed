@@ -1,0 +1,191 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .font-urdu {
+    font-family: 'Noto Naskh Arabic', 'Gulzar', 'Jameel Noori Nastaleeq', 'Urdu Typesetting', serif;
+    line-height: 1.8;
+  }
+  .font-sans {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  /* 3D Glass Box style - semi-transparent with blur so 3D background is visible inside all boxes */
+  .bg-glass-3d {
+    background-color: rgba(10, 25, 47, 0.55);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+  }
+
+  .bg-glass-3d-purple {
+    background: linear-gradient(135deg, rgba(76, 29, 149, 0.45), rgba(10, 25, 47, 0.65));
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+  }
+
+  .bg-glass-3d-blue {
+    background: linear-gradient(135deg, rgba(14, 116, 144, 0.45), rgba(10, 25, 47, 0.65));
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+  }
+
+  /* 4-Color Animated Running Gradient Classes */
+  .bg-run-4colors {
+    background: linear-gradient(135deg, #38bdf8, #34d399, #fbbf24, #f43f5e, #c084fc, #38bdf8);
+    background-size: 400% 400%;
+    animation: gradient-run 4s ease infinite;
+  }
+
+  .border-animated-4colors {
+    background: linear-gradient(90deg, #38bdf8, #34d399, #fbbf24, #f472b6, #a855f7, #38bdf8);
+    background-size: 300% 300%;
+    animation: gradient-run 4s linear infinite;
+  }
+
+  .border-animated-4colors-fast {
+    background: linear-gradient(135deg, #00f0ff, #00ff88, #ffb800, #ff007a, #9d00ff, #00f0ff);
+    background-size: 350% 350%;
+    animation: gradient-run 3.5s linear infinite;
+  }
+
+  /* Pediatric Card Background */
+  .bg-run-4colors-card {
+    background: linear-gradient(135deg, #0f172a, #1e293b, #0f172a, #1e1b4b, #0f172a);
+    background-size: 300% 300%;
+    animation: gradient-run 6s ease infinite;
+  }
+
+  /* Pediatric Inner Box Gradient */
+  .bg-run-4colors-subtle {
+    background: linear-gradient(135deg, #0284c7, #6366f1, #9333ea, #e11d48, #0284c7);
+    background-size: 300% 300%;
+    animation: gradient-run 4s ease infinite;
+  }
+
+  /* 4-Color Vibrant Squircle Border (Cyan/Emerald/Amber/Pink/Purple) */
+  .border-run-vibrant-squircle {
+    background: linear-gradient(135deg, #38bdf8, #34d399, #f59e0b, #f43f5e, #c084fc, #38bdf8);
+    background-size: 300% 300%;
+    animation: gradient-run 3.5s linear infinite;
+  }
+
+  /* Pediatric Multi-Color Border Line Effect */
+  .border-run-4colors {
+    position: relative;
+  }
+  .border-run-4colors::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: inherit;
+    padding: 2px;
+    background: linear-gradient(90deg, #38bdf8, #34d399, #fbbf24, #f472b6, #c084fc, #38bdf8);
+    background-size: 300% 300%;
+    animation: gradient-run 4s linear infinite;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    z-index: 10;
+  }
+
+  /* Pediatric Running Box Canvas */
+  .box-run-4colors {
+    position: relative;
+    overflow: hidden;
+  }
+  .box-run-4colors::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 2px;
+    background: linear-gradient(135deg, #0284c7, #10b981, #f59e0b, #ec4899, #8b5cf6, #0284c7);
+    background-size: 300% 300%;
+    animation: gradient-run 5s linear infinite;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    z-index: 10;
+  }
+
+  /* Animated Glowing Internal Aura */
+  .box-run-inner-aura {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: radial-gradient(circle at 20% 20%, rgba(56, 189, 248, 0.25), transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(52, 211, 153, 0.25), transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(244, 114, 182, 0.25), transparent 50%),
+                radial-gradient(circle at 20% 80%, rgba(192, 132, 252, 0.25), transparent 50%);
+    background-size: 200% 200%;
+    animation: gradient-run 7s ease-in-out infinite;
+    pointer-events: none;
+  }
+
+  /* 4-Color Animated Running Text Gradient - Sky Cyan / Mint Green / Sunshine Yellow / Coral Pink */
+  .text-run-4colors-fast {
+    background: linear-gradient(90deg, #38bdf8, #34d399, #fbbf24, #f472b6, #c084fc, #38bdf8);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-run 3.5s ease-in-out infinite;
+  }
+
+  /* 4-Color Animated Running Text Gradient - Coral Rose / Royal Violet / Cyan / Gold */
+  .text-run-4colors-vibrant {
+    background: linear-gradient(90deg, #f43f5e, #c084fc, #38bdf8, #f59e0b, #34d399, #f43f5e);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-run 4s ease-in-out infinite;
+  }
+
+  /* Pediatric Text Gradient */
+  .text-run-4colors {
+    background: linear-gradient(90deg, #38bdf8, #a78bfa, #f472b6, #fbbf24, #38bdf8);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-run 5s ease infinite;
+  }
+}
+
+@keyframes gradient-run {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+body {
+  background-color: #020617; /* bg-slate-950 */
+  color: #f8fafc; /* text-slate-50 */
+}
+
+html {
+  scroll-behavior: auto !important;
+}
+
+/* Custom sleek scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #090d16;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+

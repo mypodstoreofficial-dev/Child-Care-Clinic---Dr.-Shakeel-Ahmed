@@ -1,0 +1,6 @@
+{
+  "name": "Child Care Clinic - Dr. Shakeel Ahmed",
+  "description": "Official website for Child Care Clinic led by Dr. Shakeel Ahmed (Child Specialist). Appointments, services, growth calculator, vaccination schedule, and WhatsApp booking.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
